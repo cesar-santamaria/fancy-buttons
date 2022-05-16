@@ -8,6 +8,7 @@ import './App.css';
 function App() {
   const [light, setLight] = useState("off");
 
+  const switchLight = () => setLight(light === "off" ? "on" : "off");
   const dark = (light === 'off') ? 'dark' : '';
 
   return ( 
@@ -16,7 +17,7 @@ function App() {
       <section>
         <AngryButton/>
         <CounterButton/>
-        <LightSwitchButton light={light} setLight={setLight}/>
+        <LightSwitchButton light={light} switchLight={switchLight}/>
         <TextRepeatButton/>
       </section>
     </div>
